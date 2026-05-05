@@ -24,7 +24,7 @@ jobs:
         run: pip install -r requirements.txt
 
       - name: Run API tests
-        run: pytest api_tests/
+        run: pytest tests/api/
 
   web-tests:
     name: Web tests (SauceDemo)
@@ -45,4 +45,4 @@ jobs:
         env:
           BROWSER: chrome
           HEADLESS: "true"
-        run: pytest web_tests/
+        run: pytest tests/web/
