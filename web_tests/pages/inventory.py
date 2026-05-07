@@ -9,8 +9,7 @@ class InventoryPage(BasePage):
     CART_LINK = (By.CLASS_NAME, "shopping_cart_link")
 
     def add_to_cart(self, product_id):
-        button = self.find((By.ID, f"add-to-cart-{product_id}"))
-        self.driver.execute_script("arguments[0].click();", button)
+        self.click((By.ID, f"add-to-cart-{product_id}"))
         self.find((By.ID, f"remove-{product_id}"))
 
     def cart_count(self):
