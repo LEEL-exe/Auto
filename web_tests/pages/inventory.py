@@ -10,6 +10,7 @@ class InventoryPage(BasePage):
 
     def add_to_cart(self, product_id):
         self.click((By.ID, f"add-to-cart-{product_id}"))
+        self.find((By.ID, f"remove-{product_id}"))
 
     def cart_count(self):
         return int(self.text_of(self.CART_BADGE))
