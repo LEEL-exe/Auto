@@ -18,3 +18,4 @@ class InventoryPage(BasePage):
 
     def open_cart(self):
         self.click(self.CART_LINK)
+        self.find((By.CLASS_NAME, "cart_list"))
